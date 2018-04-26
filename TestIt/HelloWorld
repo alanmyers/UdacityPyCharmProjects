@@ -1,0 +1,13 @@
+import time;
+import webbrowser
+
+print("starting on", time.ctime())
+cnt = 3
+while cnt > 0:
+    time.sleep(2)
+    webbrowser.open("https://www.cnn.com/")
+    cnt = cnt - 1
+
+print("ending on", time.ctime())
+
+
