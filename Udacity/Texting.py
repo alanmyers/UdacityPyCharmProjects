@@ -1,16 +1,22 @@
 import time;
+import configparser
+config = configparser.ConfigParser()
+
+config.read(r"C:\Users\amyer\PycharmProjects\Udacity\texter.ini")
+
 from twilio.rest import Client
 
-auth_token = "d3ff8561337ef68c149b626e00ad150d"
-acct_sid = "ACa640b06c93d7f780398d1c063b409265"
+auth_token = config['DEFAULT']['auth_token']
+acct_sid = config['DEFAULT']['acct_sid']
 
-fromNb = "+17206055437"
-toNb = "+17202392413"
+fromNb = config['DEFAULT']['fromNb']
+toNb = config['DEFAULT']['toNb']
 msgTxt = "Hello There!"
 
 client = Client(acct_sid, auth_token)
 
 #message = client.sms.messages.create(msgTxt, toNb,twilioPhoneNb)
+
 message = client.api.account.messages.create(to=toNb,from_=fromNb,body=msgTxt)
 
 print ("Done with message call: ", message.status)
