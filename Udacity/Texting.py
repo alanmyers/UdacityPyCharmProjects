@@ -28,6 +28,9 @@ print ("Done with message call: ", message.status)
 print ("Message Status is now: ", message.status)
 
 print ("Changed remotely")
+x = 4 / 2 
+print ("4 / 2 = ", x)
+
 
 #import twilio
 #print(twilio.__version__)
