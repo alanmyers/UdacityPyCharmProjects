@@ -27,6 +27,7 @@ print ("Done with message call: ", message.status)
 
 print ("Message Status is now: ", message.status)
 
+print ("Changed remotely")
 
 #import twilio
 #print(twilio.__version__)
