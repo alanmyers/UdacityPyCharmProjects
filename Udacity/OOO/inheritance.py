@@ -1,5 +1,6 @@
 import parent, child
 
+billy_cyrus = parent.Parent("Cyrus", "Green")
 miley_cyrus = child.Child("Cyrus", "Blue", 5)
-print(miley_cyrus.last_name)
-print(miley_cyrus.number_of_toys)
+miley_cyrus.show_info()
+
